@@ -1,0 +1,38 @@
+<p class="small_text red_text">Новое название:</p>
+<input class="textfield_edit" type="text" ng-model="receptMainInformationCtrl.model.name" width="100%"/><br><br>
+
+<p class="small_text red_text">Новый раздел:</p>
+<select class="textfield_edit" ng-model="receptMainInformationCtrl.model.departId.id" convert-to-number>
+    <option ng-repeat="depart in receptMainInformationCtrl.departs" value="{{depart.id}}">{{depart.name}}</option>
+</select>
+<br><br>
+
+<img width="100%" id="photo" ng-src="{{receptMainInformationCtrl.file}}"/>
+<br>
+
+<span class="small_text red_text">Новое фото:</span>
+<label class="import_file">
+    <input file-model="receptMainInformationCtrl.foto" type="file"
+           accept="image/png"/>
+    <span class="glyphicon glyphicon-download-alt"></span>
+    <span ng-bind="receptMainInformationCtrl.foto.name"></span>
+</label>
+
+<br>
+<br>
+
+<textarea class="textfield_edit" ng-model="receptMainInformationCtrl.model.text" rows="8"></textarea>
+<br><br>
+
+<div ng-show="receptMainInformationCtrl.isSaveMainInfoVisible() && !receptMainInformationCtrl.belowContentVisible">
+    <button class="btn" ng-click="receptMainInformationCtrl.saveMainInfo()">Сохранить</button>
+</div>
+
+<div class="recept_error" ng-show="receptMainInformationCtrl.error"
+     ng-bind="receptMainInformationCtrl.error"></div>
+
+<div ng-show="receptMainInformationCtrl.belowContentVisible">
+    <button class="btn" ng-click="receptMainInformationCtrl.saveMainInfo()">Изменить</button>
+</div>
+
+<br>

@@ -1,0 +1,51 @@
+<div>
+    <h1 class="text-center"
+        ng-bind="receptDescriptionCtrl.recept.name">
+    </h1>
+</div>
+
+<div class="text-center">
+    <img width="100%" ng-src="{{receptDescriptionCtrl.recept.file}}">
+</div>
+
+
+<table style="margin:auto">
+    <tr class="small_text" ng-repeat="proportion in receptDescriptionCtrl.recept.proportions">
+        <td ng-bind="proportion.ingridient.name"></td>
+        <td><span ng-if="proportion.norma">&nbsp&nbsp-&nbsp&nbsp</span></td>
+        <td ng-bind="proportion.norma"></td>
+    </tr>
+</table>
+
+<br>
+
+<div class="text-justify">
+    <p class="small_text red_text"
+       ng-bind="receptDescriptionCtrl.recept.text">
+    </p>
+</div>
+
+<div class="text-center" ng-repeat="reference in receptDescriptionCtrl.recept.references">
+    <span class="recept_reference" ng-click="receptDescriptionCtrl.viewReference(reference.receptReferenceId)"
+          ng-bind="reference.receptReferenceName">
+    </span>
+    <br>
+</div>
+
+<table style="margin:auto">
+    <tr ng-repeat="detail in receptDescriptionCtrl.recept.details">
+        <td>
+            <img width="300px" ng-src="{{detail.file}}">
+        </td>
+        <td ng-bind="detail.description"></td>
+    </tr>
+</table>
+
+<br>
+
+<button class="btn" ng-click="receptDescriptionCtrl.editRecept()">Редактировать</button>
+<button class="btn" ng-click="receptDescriptionCtrl.deleteRecept()">Удалить</button>
+<button class="btn" ng-click="receptDescriptionCtrl.getPdfFromRecept()">
+    <div ng-if="!receptDescriptionCtrl.pdf">PDF</div>
+    <a ng-href="{{receptDescriptionCtrl.pdf}}" ng-if="receptDescriptionCtrl.pdf" download="{{receptDescriptionCtrl.recept.name}}.pdf" ng-bind="receptDescriptionCtrl.recept.name"></a>
+</button>

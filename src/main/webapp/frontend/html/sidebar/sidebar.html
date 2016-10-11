@@ -1,0 +1,55 @@
+<ul class="nav navmenu-nav">
+    <li>
+        <button class="btn">
+            <span>Поиск:</span>
+            <br>
+            <input ng-model="sidebarCtrl.query">
+        </button>
+    </li>
+
+    <li>
+        <button class="btn">
+            <span>Сортировка:</span>
+            <br>
+            <select ng-model="sidebarCtrl.sort">
+                <option value="name">алфавит</option>
+                <option value="id">дата</option>
+            </select>
+        </button>
+    </li>
+    <li>
+        <button class="btn"
+                ng-click="sidebarCtrl.createRecept()">
+            Новый рецепт
+        </button>
+    </li>
+    <li>
+        <button class="btn"
+                ng-click="sidebarCtrl.editIngridients()">
+            Ингридиенты
+        </button>
+    </li>
+    <li>
+        <button class="btn">
+            <span>На странице:</span>
+            <br>
+            <input ng-model="sidebarCtrl.itemsPerPage">
+        </button>
+    </li>
+    <li>
+        <button class="btn">
+            <label class="import_file">
+                <input file-model="sidebarCtrl.file" type="file"
+                       accept="application/xml"/>
+                <span>Загрузить XML</span>
+                <span ng-bind="sidebarCtrl.file.name"></span>
+            </label>
+        </button>
+        <button class="btn"
+            ng-click="sidebarCtrl.parseFile()">
+            парсить
+        </button>
+        <div class="recept_error" ng-if="sidebarCtrl.error"
+             ng-bind="sidebarCtrl.error"></div>
+    </li>
+</ul>

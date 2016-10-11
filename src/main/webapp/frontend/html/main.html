@@ -1,0 +1,43 @@
+<div class="row">
+
+    <div class="col-lg-4 col-sm-1 col-md-3"></div>
+
+    <div class="root col-lg-16 col-sm-22 col-md-18 row">
+
+        <div class="col-lg-4 col-sm-5 col-md-5">
+            <recept-menu
+                    theme="mainCtrl.theme"
+                    choosen-depart-id="mainCtrl.choosenDepartId"
+                    choosen-tag-id="mainCtrl.choosenTagId"
+                    state="mainCtrl.state"/>
+        </div>
+
+        <div class="col-lg-1 col-sm-1 col-md-1"></div>
+
+        <div class="col-lg-14 col-sm-12 col-md-12 row">
+            <recept-content
+                    choosen-depart-id="mainCtrl.choosenDepartId"
+                    choosen-tag-id="mainCtrl.choosenTagId"
+                    state="mainCtrl.state"
+                    query="mainCtrl.query"
+                    sort="mainCtrl.sort"
+                    items-per-page="mainCtrl.itemsPerPage"
+                    recept-id="mainCtrl.receptId"/>
+        </div>
+
+        <div class="col-lg-1 col-sm-1 col-md-1"></div>
+
+        <div class="col-lg-4 col-sm-5 col-md-5 row">
+            <recept-sidebar
+                    state="mainCtrl.state" ,
+                    query="mainCtrl.query"
+                    sort="mainCtrl.sort"
+                    items-per-page="mainCtrl.itemsPerPage"
+                    recept-id="mainCtrl.receptId"/>
+        </div>
+
+    </div>
+
+    <div class="col-lg-4 col-sm-1 col-md-3"></div>
+
+</div>

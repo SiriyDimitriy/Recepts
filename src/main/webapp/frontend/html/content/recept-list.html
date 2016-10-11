@@ -1,0 +1,18 @@
+<ul>
+    <li type="none"
+        ng-repeat="recept in receptListCtrl.groupingReceptList[receptListCtrl.pageNumber]| filter:receptListCtrl.query | orderBy : receptListCtrl.sort"
+        ng-click="receptListCtrl.showRecept(recept.id)">
+        <img width="30%" ng-src="{{recept.file}}">
+
+        <p ng-bind="recept.name"></p>
+        <br>
+    </li>
+</ul>
+
+<div class="pages">
+    <button class="page_button btn"
+            ng-repeat="page in receptListCtrl.groupingReceptList"
+            ng-bind="$index+1"
+            ng-click="receptListCtrl.showPage($index)">
+    </button>
+</div>

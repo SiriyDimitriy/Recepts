@@ -1,0 +1,29 @@
+<ul class="nav navmenu-nav">
+    <li ng-repeat="depart in menuCtrl.departs| orderBy : 'id'">
+        <button class="btn" ng-click="menuCtrl.chooseDepart(depart.id)"
+           ng-bind="depart.name"></button>
+    </li>
+    <br>
+    <li>
+        <button class="btn" ng-click="menuCtrl.chooseDepart(-1)">Все</button>
+    </li>
+    <br>
+    <li ng-repeat="tag in menuCtrl.tags| orderBy : 'id'">
+        <button class="btn" ng-click="menuCtrl.chooseTag(tag.id)"
+                ng-bind="tag.name"></button>
+    </li>
+</ul>
+<ul class="nav navmenu-nav">
+    <li>
+        <img width="100%" ng-src="frontend/pictures/{{menuCtrl.theme.theme}}.png">
+    </li>
+    <li>
+        <button class="btn">
+            <span>Темы:</span><br>
+            <select ng-model="menuCtrl.theme.theme">
+                <option value="wind">Wind theme</option>
+                <option value="fire">Fire theme</option>
+            </select>
+        </button>
+    </li>
+</ul>

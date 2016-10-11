@@ -1,0 +1,144 @@
+body {
+    background-color: black;
+    color: #FA5858;
+    text-shadow: -1px -1px #3B0B0B;
+    font-size: 2em;
+    font-family: cursive;
+}
+
+.root {
+    box-shadow: 0 0 0 6px #610B0B, 0 0 0 12px #3B0B0B;
+    border: 2px solid #810A00;
+    background-color: #151515;
+}
+
+button:hover {
+    background-color: #3B0B0B !important;
+}
+
+button {
+    background-color: #810A00;
+    color: black;
+    text-shadow: -1px -1px #FA5858;
+    margin: 10px 0 10px 0;
+    width: 100%;
+    border: 0px;
+}
+
+li {
+    text-align: center;
+    width: 100% !important;;
+}
+
+select {
+    border-radius: 5px;
+    background-color: black;
+    color: #FA5858;
+    text-shadow: -1px -1px #3B0B0B;
+}
+
+input {
+    border-radius: 5px;
+    color: #FA5858;
+    text-shadow: -1px -1px #3B0B0B;
+    width: 100%;
+    padding: 0 4px 0 4px;
+    background-color: black;
+}
+
+td {
+    vertical-align: middle;
+}
+
+table {
+    margin: auto;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.import_file {
+    color: #ec971f;
+}
+
+.textfield_edit {
+    background-color: #151515;
+    padding-left: 10px !important;
+    width: 100% !important;
+    border: 2px solid #610B0B;
+    font-size: 1em;
+    color: #FA5858;
+    border-radius: 5px;
+}
+
+.textfield_edit:focus {
+    border: 2px solid #FA5858;
+}
+
+.content {
+    padding: 20px 0 20px 0;
+}
+
+.small_text {
+    font-size: 0.7em;
+}
+
+.red_text {
+    color: #810A00;
+}
+
+.recept_reference {
+    font-size: 0.7em;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.recept_error {
+    background-color: #FA5858;
+    border-radius: 5px;
+    color: #204d74;
+    font-style: italic;
+    font-weight: bold;
+    border: 2px solid #204d74;
+    text-align: center;
+    padding: 5px;
+}
+
+.proportion_picture {
+    width: 100%;
+    background-image: url(/frontend/pictures/fire.png);
+    z-index: 1000;
+}
+
+.table_cell_content {
+    margin: 5px 0 5px 0;
+}
+
+.show_hide_button {
+    display: block;
+    width: 200px;
+    margin: auto;
+    background-color: #ec971f;
+}
+
+.page_button {
+    display: inline-block;
+    width: 30px;
+    background-color: #ec971f;
+    font-size: 0.5em;
+    margin: 2px;
+}
+
+.show_hide_button:hover {
+    background-color: #985f0d !important;
+}
+
+.page_button:hover {
+    background-color: #985f0d !important;
+}
+
+.pages {
+    margin: auto;
+}
+
